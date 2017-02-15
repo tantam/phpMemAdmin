@@ -48,22 +48,12 @@ This software is currently in early alpha state and so i want to warn - There is
 `phpMemAdmin` was designed as helper while developing a cache in PHP using Memcached as in memory store. I had a need for a tool which displays me modified data stored in Memcached for example. The existing tools did not provide a UI i would describe as usable so i wrote my own. Trying to align it with the `PECL` Memcached extension.
 
 ## Installation
-The recommended way to install this tool is through [Composer](http://getcomposer.org/). Require the `clickalicious/phpmemadmin` package into your `composer.json` file:
+Your server have to install Composer before using phpMemAdmin. You can check it out in this link: [Composer](http://getcomposer.org/). 
 
-```json
-{
-    "require": {
-        "clickalicious/phpmemadmin": "~0.3"
-    },
-    "scripts": {
-    	"post-install-cmd": [
-        	"Clickalicious\\PhpMemAdmin\\Installer::postInstall"
-    	]
-    }
-}
-```
-
-**Important!** The postInstall call is important - it installs all required files and shows you an example vhost configuration for your installation. So be sure to add it to the `composer.json` (as shown above) before you call `composer install`. phpMemAdmin requires at least v0.4.0 of Memcached.php!
+* Clone this project
+* Run `composer install`
+* Create a virtual host with directory root folder points to web
+* Go to [#Config] to setup configuration
 
 **phpMemAdmin** is also available as [download from github packed as zip-file](https://github.com/clickalicious/phpMemAdmin/archive/master.zip "zip package containing library for download") or via `git clone https://github.com/clickalicious/phpMemAdmin.git .`
 
